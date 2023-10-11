@@ -9,12 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="logi.php">
 </head>
 <body>
   <header>
     <a href="#" class="logo">Sam<span>Tech</span></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+   
   <ul class="navlist">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -25,21 +30,20 @@
   <div class="top-header">
     <a href="" class="h-btn">Contact me</a> 
   </div>
+  <div class="bx bx-menu" id="menu-icon"></div>
 </header>
 
 <section class="hero" id="home">
-  <video autoplay loop muted plays-inline class="back-video">
-    <source src="images\me.mp4" type="video/mp4">
-  </video>
-    <div class="main-content">
+  <img src="images/c.jpg" class="back-video">
+    <div class="main-content"  data-aos="fade-in">
         <h4>Hi, My name is</h4>
         <h1><span>Samwel Mwangi</span></h1>
         <p>Software and android developer</p>
         <div class="social">
             <a href=""><i class="ri-facebook-circle-fill"></i></a>
             <a href=""><i class="ri-instagram-line"></i></a>
-            <a href=""><i class="ri-twitter-x-line"></i></a>
-            <a href=""><i class="ri-whatsapp-fill"></i></a>
+            <a href="tel:+254798590202"><i class="ri-twitter-x-line"></i></a>
+            <a href=" https://wa.me/+254798590202"><i class="ri-whatsapp-fill"></i></a>
         </div>
         <div class="main-btn">
             <a href="" class="btn">Hire Me</a>
@@ -50,9 +54,9 @@
 </section>
 <section class="about" id="about">
       <div class="about-img">
-        <img src="s.jpg" alt="">
+        <img src="" data-aos="zoom-in-down">
       </div>
-      <div class="about-text">
+      <div class="about-text" data-aos="zoom-in-up">
         <h2>I'am <span> electrical Engineer</span><br> & <span>web developer</span></h2>
         <div class="exp-area">
             <p class="exp">
@@ -80,14 +84,15 @@
     </div>
 </section>
 <section class="services" id="services">
-    <div class="center-text">
+    <div class="center-text" data-aos="fade-down">
         <h2>My <span>Services</span></h2>
     </div>
-    <div class="service-content">
+    <div class="service-content" data-aos="zoom-in-up">
          <div class="box">
            <img src="" alt="">
             <h3>Phone Repair</h3>
-            <p>i fldgfndfngjkdfgnlkdng</p>
+            <p>I have an experience in solving  mobile problems
+               such as to remove mkopa, remove dlight, remove admin on different devices.Mobile network and password reset. dissambling and reassabling phones</p>
             <a href="#">
               Read More...
             </a>
@@ -95,23 +100,24 @@
          <div class="box">
           <img src="" alt="">
            <h3>Web Developer</h3>
-           <p>i fldgfndfngjkdfgnlkdng</p>
+           <p> I'm  front-end developer and back-end developer</p>
            <a href="#">
            Read More...
            </a>
         </div>
+     
         <div class="box">
-          <img src="" alt="">
-           <h3>Software Developer</h3>
-           <p>i fldgfndfngjkdfgnlkdng</p>
+          <img src="images/" alt="">
+           <h3>Domestic Power Installation</h3>
+           <p>Lighting Installations,Security System Installations,Wiring and Rewires,Fuseboard/Fusebox Upgrades </p>
            <a href="#">
             Read More...
            </a>
         </div>
         <div class="box">
           <img src="" alt="">
-           <h3>Domestic Power Installation</h3>
-           <p>i fldgfndfngjkdfgnlkdng</p>
+           <h3>Software Developer</h3>
+           <p>I'm  front-end developer and back-end developer</p>
            <a href="#">
             Read More...
            </a>
@@ -126,8 +132,41 @@
   </div>
   
 </section>
+<section class="contact" id="contact">
+  <div class="center-text" data-aos="fade=down">
+    <h2>Contact <span>Me</span></h2>
+    <div class="contact-form" data-aos="zoom-in">
 
+      <form onsubmit="emailSend(); reset(); return false;">
+        <input type="text" id="name" placeholder="Your Name" name="name" required>
+        <input type="email" id="email" placeholder="Email Address" name="email" required>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here..."></textarea>
+        <input type="submit" name="message" value="send" class="send-btn">
+      </form>
 
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="copyright">
+    <p>2023 sirmillion, All Rights Reserved</p>
+  </div>
+  <a href="#home" class="scroll-top">
+    <i class="ri-arrow-up-s-fill"></i>
+  </a>
+</div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="script.js"></script> 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ 
+  <script>
+    AOS.init( {
+      offset: 300,
+      duration: 1400,
+    });
+  </script>
 </body>
 </html>
